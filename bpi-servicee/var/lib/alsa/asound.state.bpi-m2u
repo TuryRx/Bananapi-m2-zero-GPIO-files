@@ -1,0 +1,574 @@
+state.audiocodec {
+	control.1 {
+		iface MIXER
+		name 'codec hub mode'
+		value hub_disable
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 null
+			item.1 hub_disable
+			item.2 hub_enable
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'digital volume'
+		value 63
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+			dbmin -7424
+			dbmax -116
+			dbvalue.0 -116
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Headphone volume'
+		value 59
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 63'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -400
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'LINEIN Mixer volume'
+		value.0 3
+		value.1 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 7'
+			dbmin -450
+			dbmax 600
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'FM gain volume'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -450
+			dbmax 600
+			dbvalue.0 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'LINEIN gain volume'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -450
+			dbmax 600
+			dbvalue.0 0
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'MIC gain volume'
+		value.0 3
+		value.1 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 7'
+			dbmin -450
+			dbmax 600
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'phoneout volume'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -450
+			dbmax 600
+			dbvalue.0 0
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'MIC1 boost volume'
+		value 4
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin 0
+			dbmax 4200
+			dbvalue.0 3300
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'MIC2 boost volume'
+		value 4
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin 0
+			dbmax 4200
+			dbvalue.0 3300
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'ADC gain volume'
+		value 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -450
+			dbmax 600
+			dbvalue.0 0
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'MIC2 Mux'
+		value MIC2IN
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 MIC3IN
+			item.1 MIC2IN
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'HPL Mux'
+		value DAC
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DAC
+			item.1 OMIX
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'HPR Mux'
+		value DAC
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 DAC
+			item.1 OMIX
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'Phone Out Mixer LOMIX Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'Phone Out Mixer ROMIX Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'Phone Out Mixer MIC2 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'Phone Out Mixer MIC1 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'Right Input Mixer LOMIX Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'Right Input Mixer ROMIX Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'Right Input Mixer FMR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'Right Input Mixer LINEINR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'Right Input Mixer LINEINLR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'Right Input Mixer MIC2 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.25 {
+		iface MIXER
+		name 'Right Input Mixer MIC1 Boost Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.26 {
+		iface MIXER
+		name 'Left Input Mixer ROMIX Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'Left Input Mixer LOMIX Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'Left Input Mixer FML Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'Left Input Mixer LINEINL Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'Left Input Mixer LINEINLR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.31 {
+		iface MIXER
+		name 'Left Input Mixer MIC2 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.32 {
+		iface MIXER
+		name 'Left Input Mixer MIC1 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'Right Output Mixer DACL Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'Right Output Mixer DACR Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'Right Output Mixer FMR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'Right Output Mixer LINEINR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.37 {
+		iface MIXER
+		name 'Right Output Mixer LINEINLR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.38 {
+		iface MIXER
+		name 'Right Output Mixer MIC2 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.39 {
+		iface MIXER
+		name 'Right Output Mixer MIC1 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.40 {
+		iface MIXER
+		name 'Left Output Mixer DACR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'Left Output Mixer DACL Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.42 {
+		iface MIXER
+		name 'Left Output Mixer FML Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.43 {
+		iface MIXER
+		name 'Left Output Mixer LINEINL Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.44 {
+		iface MIXER
+		name 'Left Output Mixer LINEINLR Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.45 {
+		iface MIXER
+		name 'Left Output Mixer MIC2 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.46 {
+		iface MIXER
+		name 'Left Output Mixer MIC1 Boost Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.47 {
+		iface MIXER
+		name 'Headphone Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.48 {
+		iface MIXER
+		name 'Phoneout Speaker Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+}
+state.sndhdmi {
+	control.1 {
+		iface MIXER
+		name 'hdmi audio format Function'
+		value pcm
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 null
+			item.1 pcm
+			item.2 AC3
+			item.3 MPEG1
+			item.4 MP3
+			item.5 MPEG2
+			item.6 AAC
+			item.7 DTS
+			item.8 ATRAC
+			item.9 ONE_BIT_AUDIO
+			item.10 DOLBY_DIGITAL_PLUS
+			item.11 DTS_HD
+			item.12 MAT
+			item.13 WMAPRO
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'sunxi daudio audio hub mode'
+		value hub_disable
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 null
+			item.1 hub_disable
+			item.2 hub_enable
+		}
+	}
+}

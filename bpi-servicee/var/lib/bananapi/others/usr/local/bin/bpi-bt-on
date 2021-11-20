@@ -1,0 +1,32 @@
+#! /bin/sh
+
+DEFAULTS="/etc/default/ap6212"
+PATCHRAM="/lib/firmware/ap6212/bcm43438a0.hcd"
+PATCHLOG="/tmp/ap6212.firmware"
+
+# Include defaults if available
+if [ -r "${DEFAULTS}" ] ; then
+	. "${DEFAULTS}"
+fi
+
+if [ ! -z $(hciconfig | /bin/grep UART | /usr/bin/cut -d: -f1) ] ; then
+	hcitool dev
+	return 0
+fi
+# Select tty port
+if [ -z "$PORT" ]; then
+	PORT="ttyS1"
+fi
+
+FWOK=`grep "F/W load done" $PATCHLOG`
+echo "FWOK=$FWOK"
+if [ -z "${FWOK}" ] ; then
+	echo "/usr/local/bin/bpi-bt-patch"
+	/usr/local/bin/bpi-bt-patch
+	sleep 3
+fi
+echo "hciattach /dev/$PORT any"
+hciattach /dev/$PORT any
+sleep 3
+hciconfig hci0 up
+return 0

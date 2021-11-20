@@ -1,0 +1,3 @@
+#BPI
+VDPAU_DRIVER=sunxi
+export VDPAU_DRIVER

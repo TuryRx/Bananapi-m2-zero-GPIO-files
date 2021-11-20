@@ -1,0 +1,59 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          bpi-bt-patch
+# Required-Start:    $local_fs
+# Required-Stop:
+# X-Start-Before:    bluetooth  
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Patch firmware for brcm Bluetooth adapter
+# Description:       Patch firmware for brcm Bluetooth adapter
+### END INIT INFO
+
+DEFAULTS="/etc/default/ap6212"
+PATCHRAM="/lib/firmware/ap6212/bcm43438a0.hcd"
+PATCHLOG="/tmp/ap6212.firmware"
+
+# Include defaults if available
+if [ -r "${DEFAULTS}" ] ; then
+	. "${DEFAULTS}"
+fi
+
+if [ ! -z $(hciconfig | /bin/grep UART | /usr/bin/cut -d: -f1) ] ; then
+	hcitool dev
+	return 0
+fi
+# Select MAC address
+if [ -z "$MAC_ADDR" ]; then
+	MAC_OPTIONS="--bd_addr 11:22:33:44:55:66"
+else
+	MAC_OPTIONS="--bd_addr $MAC_ADDR"
+fi
+
+# Select tty port
+if [ -z "$PORT" ]; then
+	PORT="ttyS1"
+fi
+
+# reset port
+/usr/local/bin/brcm_bt_reset /dev/$PORT /usr/local/bin/bt_reset.sh
+sleep 1
+	
+# Start patching
+/bin/echo -en "" > /dev/$PORT      # pull down RTS on UART
+sleep 1
+date >> $PATCHLOG
+
+/usr/bin/timeout 10s /usr/local/bin/brcm_patchram_plus -d --patchram $PATCHRAM --enable_hci --no2bytes --tosleep 1000 $MAC_OPTIONS /dev/$PORT >> $PATCHLOG 2>&1
+
+case "$?" in
+0)
+	# Enable interfaces
+	date >> $PATCHLOG
+	echo "BPI: brcm_patchram_plus OK!!" >> $PATCHLOG
+	;;
+*)
+	/bin/echo "Check $PATCHLOG for messages."
+	;;
+esac
+return 0

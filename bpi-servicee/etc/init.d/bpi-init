@@ -1,0 +1,40 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          bpi-init
+# Required-Start:    
+# Required-Stop:     glibc
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Banana Pi init script
+### END INIT INFO
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+BPIINIT="/var/lib/bananapi/bpi-init.d/bpi-init.sh"
+BPIINITLOG="/var/log/bpi-init.log"
+
+case "$1" in
+  start)
+	if [ -f ${BPIINIT} ] ; then
+		echo "BPI: run ${BPIINIT}" >> $BPIINITLOG
+		. ${BPIINIT}
+	else
+		echo "BPI: not found:  ${BPIINIT}" >> $BPIINITLOG
+	fi
+	;;
+  restart|reload|force-reload)
+	echo "Error: argument '$1' not supported" >&2
+	exit 3
+	;;
+  stop)
+	# No-op
+	;;
+  status)
+	exit 0
+	;;
+  *)
+	echo "Usage: $0 start|stop" >&2
+	exit 3
+	;;
+esac
