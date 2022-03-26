@@ -94,7 +94,7 @@ def stats(device):
         draw.text((0, 36), disk_usage(), font=font2, fill="white")
         try:
             draw.text((0, 48), network_ip(), font=font2, fill="white")
-            draw.text((66, 48), network_send(), font=font2, fill="white")
+            #draw.text((66, 48), network_send(), font=font2, fill="white")
         except KeyError:
             # no wifi enabled/available
             pass
