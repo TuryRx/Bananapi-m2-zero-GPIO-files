@@ -5,7 +5,7 @@
 ## Archivos y ejemplos para configuración de pines GPIO de Banana Pi M2Z
 
 | Descripcion | Ejemplo | Pines |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | **Encender led durante 3 segundos** | m2z_led.py | Led:29 |
 | **Encender led con boton** | m2z_led_button.py | Led:29, Boton:31 |
 | **Comprobar estado de boton** | m2z_button_state.py | Boton:31 |

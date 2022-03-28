@@ -5,7 +5,7 @@
 ## Files and examples for Banana Pi M2Z GPIO pinouts
 
 | Description | Example | Pins |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | **Turn on led for 3 seconds** | m2z_led.py | Led:29 |
 | **Turn on led with button** | m2z_led_button.py | Led:29, Button:31 |
 | **Check button status** | m2z_button_state.py | Button:31 |
