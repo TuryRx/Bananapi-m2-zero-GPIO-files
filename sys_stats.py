@@ -1,6 +1,7 @@
 #!/usr/bin/env python
-#Created by roxas 
+#Created by Roxas 
 #create 06-agosto-2021
+#https://github.com/TuryRx/Banana-pi-m2-zero-GPIO
 
 import os
 import sys
@@ -94,6 +95,7 @@ def stats(device):
         draw.text((0, 36), disk_usage(), font=font2, fill="white")
         try:
             draw.text((0, 48), network_ip(), font=font2, fill="white")
+            #To view Tx and Rx just uncomment
             #draw.text((66, 48), network_send(), font=font2, fill="white")
         except KeyError:
             # no wifi enabled/available

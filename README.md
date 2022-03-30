@@ -6,7 +6,12 @@
 
 | Descripcion | Ejemplo | Pines |
 | ------------- | ------------- | ------------- |
-| **Encender led durante 3 segundos** | m2z_led.py | Led:29 |
-| **Encender led con boton** | m2z_led_button.py | Led:29, Boton:31 |
-| **Comprobar estado de boton** | m2z_button_state.py | Boton:31 |
+| **Encender led durante 3 segundos** | led_m2z.py | Led:29 |
+| **Encender led con boton** | led_button_m2z.py | Led:29, Boton:31 |
+| **Comprobar estado de boton** | button_state_m2z.py | Boton:31 |
 | **Ver metricas de sistema en pantalla oled** | sys_stats.py | SDA:3, SCL:5 |
+| **Muestra si un boton esta presionado** | button_event_m2z.py | Boton:33 |
+| **Muestra la configuracion actual de los pines** | gpio_funcion_m2z.py | ALL |
+| **Muestra la informacion de nuestra placa** | info_board_m2z.py | NULL |
+| **Muestra de vercion de GPIO** | info_gpio_m2z.py | NULL |
+| **Utiliza un led para mostrar un PWM** | pwm_m2z.py | 7 |

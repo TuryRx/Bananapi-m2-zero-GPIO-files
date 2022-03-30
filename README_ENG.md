@@ -6,7 +6,12 @@
 
 | Description | Example | Pins |
 | ------------- | ------------- | ------------- |
-| **Turn on led for 3 seconds** | m2z_led.py | Led:29 |
-| **Turn on led with button** | m2z_led_button.py | Led:29, Button:31 |
-| **Check button status** | m2z_button_state.py | Button:31 |
+| **Turn on led for 3 seconds** | led_m2z.py | Led:29 |
+| **Turn on led with button** | led_button_m2z.py | Led:29, Button:31 |
+| **Check button status** | button_state_m2z.py | Button:31 |
 | **See system metrics on oled screen** | sys_stats.py | SDA:3, SCL:5 |
+| **Shows if a button is pressed** | button_event_m2z.py | Button:33 |
+| **Shows current pin configuration** | gpio_function_m2z.py | ALL |
+| **Shows the information of our plate** | info_board_m2z.py | NULL |
+| **GPIO version sample** | info_gpio_m2z.py | NULL |
+| **Uses a led to show a PWM** | pwm_m2z.py | 7 |
