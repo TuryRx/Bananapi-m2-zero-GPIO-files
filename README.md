@@ -4,7 +4,7 @@
 
 ## Archivos y ejemplos para configuración de pines GPIO de Banana Pi M2Z
 
-### Para ejecutar los programas utilizar el (sudo python3 (programa sin los paréntesis)), para utilizar el programa de sys_stats.py ejecutarlo de esta forma (sudo python3 sys_stats.py –i2c-port 0).
+Para ejecutar los programas utilizar el (sudo python3 (programa sin los paréntesis)), para utilizar el programa de sys_stats.py ejecutarlo de esta forma (sudo python3 sys_stats.py –i2c-port 0).
 
 | Descripcion | Ejemplo | Pines |
 | ------------- | ------------- | ------------- |

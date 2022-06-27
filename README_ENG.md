@@ -4,7 +4,7 @@
 
 ## Files and examples for Banana Pi M2Z GPIO pinouts
 
-### To run the programs use (sudo python3 (program without parentheses)), to use the program from sys_stats.py run it like this (sudo python3 sys_stats.py –i2c-port 0).
+To run the programs use (sudo python3 (program without parentheses)), to use the program from sys_stats.py run it like this (sudo python3 sys_stats.py –i2c-port 0).
 
 | Description | Example | Pins |
 | ------------- | ------------- | ------------- |
