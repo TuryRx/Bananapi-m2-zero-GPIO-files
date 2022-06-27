@@ -5,15 +5,17 @@
 #Ejemplo: sudo gpio -1 mode 29 down
 #Nota2: Para correrlo asi utilizar resistencia de 10K a GND
 
+#!/usr/bin/env python
 import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BOARD)
-GPIO.setup(31, GPIO.IN)
+GPIO.setup(31, GPIO.IN, GPIO.PUD_UP)
 
 while True:
   if GPIO.input(31):
     print ("Button state: LOW")
   else:
     print ("Button state: HIGH")
-  time.sleep(1)
+  time.sleep(0.1)
+
