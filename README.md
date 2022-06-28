@@ -13,10 +13,10 @@ Para ejecutar los programas utilizar el (sudo python3 (programa sin los parénte
 | **Comprobar estado de boton** | button_state_m2z.py | Boton:31 |
 | **Ver metricas de sistema en pantalla oled** | sys_stats.py | SDA:3, SCL:5 |
 | **Muestra si un boton esta presionado** | button_event_m2z.py | Boton:31 |
-| **Configurar botón con resistencia pull up interna** | button_pull_up_m2z.py | 31 |
-| **Lee estado de botón con resistencia pull up interna** | gpio_read_pin_m2z.py | 31 |
-| **Configurar botón con resistencia pull up interna y rising** | button_event_rising_m2z.py | 31 |
+| **Configurar botón con resistencia pull up interna** | button_pull_up_m2z.py | Boton:31 |
+| **Lee estado de botón con resistencia pull up interna** | gpio_read_pin_m2z.py | Boton:31 |
+| **Configurar botón con resistencia pull up interna y rising** | button_event_rising_m2z.py | Boton:31 |
 | **Muestra la configuracion actual de los pines** | gpio_funcion_m2z.py | ALL |
 | **Muestra la informacion de nuestra placa** | info_board_m2z.py | NULL |
 | **Muestra de vercion de GPIO** | info_gpio_m2z.py | NULL |
-| **Utiliza un led para mostrar un PWM** | pwm_m2z.py | 7 |
+| **Utiliza un led para mostrar un PWM** | pwm_m2z.py | Pin:7 |

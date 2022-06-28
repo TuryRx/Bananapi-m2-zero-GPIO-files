@@ -13,10 +13,10 @@ To run the programs use (sudo python3 (program without parentheses)), to use the
 | **Check button status** | button_state_m2z.py | Button:31 |
 | **See system metrics on oled screen** | sys_stats.py | SDA:3, SCL:5 |
 | **Shows if a button is pressed** | button_event_m2z.py | Button:31 |
-| **Configure button with internal pull up resistor** | button_pull_up_m2z.py | 31 |
-| **Read button status with internal pull up resistor** | gpio_read_pin_m2z.py | 31 |
-| **Configure button with internal pull up and rising resistance** | button_event_rising_m2z.py | 31 |
+| **Configure button with internal pull up resistor** | button_pull_up_m2z.py | Button:31 |
+| **Read button status with internal pull up resistor** | gpio_read_pin_m2z.py | Button:31 |
+| **Configure button with internal pull up and rising resistance** | button_event_rising_m2z.py | Button:31 |
 | **Shows current pin configuration** | gpio_function_m2z.py | ALL |
 | **Shows the information of our plate** | info_board_m2z.py | NULL |
 | **GPIO version sample** | info_gpio_m2z.py | NULL |
-| **Uses a led to show a PWM** | pwm_m2z.py | 7 |
+| **Uses a led to show a PWM** | pwm_m2z.py | Pin:7 |
